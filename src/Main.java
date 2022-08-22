@@ -27,18 +27,25 @@ public class Main {
     var fullName = String.format("%s %s %s", firstName, middleName, lastName);
     String result = fullName.toUpperCase();
     System.out.println("Данные ФИО сотрудника для заполнения отчета — " + result);}
-        System.out.println("");
+    System.out.println("");
 
-    //DZ 1.7.3
+        //DZ 1.7.3
+
     var fullName = "Иванов Семён Семёнович";
     var split = fullName.split("");
+    String result = " ";
     for (String current : split) {
         if (current.contains("ё")) {
-            var text = current.replace("ё", "e");
-            System.out.print(text);
-        }else {
+            var replacement = current.replace("ё", "e");
+            result += replacement;
+        } else {
             System.out.print(current);
+            result += current;
         }
+        result += "";
     }
+        System.out.println("");
+    System.out.printf("Данные ФИО сотрудника — %s", result);
+
     }
 }
